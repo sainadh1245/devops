@@ -1,0 +1,17 @@
+node {
+    stage('Build') {
+        dir('Exp8') {
+            sh 'javac Main.java'
+        }
+    }
+
+    stage('Test') {
+        dir('Exp8') {
+            sh 'java Main'
+        }
+    }
+
+    stage('Deploy') {
+        echo 'Application Deployed Successfully'
+    }
+}
