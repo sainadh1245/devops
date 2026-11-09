@@ -1,0 +1,13 @@
+node {
+    stage('Build') {
+        sh 'javac Main.java'
+    }
+
+    stage('Test') {
+        sh 'java Main'
+    }
+
+    stage('Deploy') {
+        echo 'Application Deployed Successfully'
+    }
+}
